@@ -505,11 +505,11 @@ label.title {
 }
 .main_header .navbar-nav > li {
   position: relative;
-  margin: 0px 4px;
+  margin: 0px 17px;
 }
 .main_header .navbar-nav > li > a {
   font-size: 21px;
-  padding: 40px 13px 40px 13px !important;
+  padding: 40px 0 40px 0 !important;
   text-align: center;
   text-transform: uppercase;
   display: flex;
@@ -526,7 +526,16 @@ label.title {
   }
 }
 .main_header .navbar-nav > li:hover > a {
-  color: #327136 !important;
+  /* color: $secondary !important; */
+}
+.main_header .navbar-nav > li:hover > a::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  bottom: 0;
+  bottom: -9px;
+  background: #202188;
 }
 .main_header .navbar-nav .dropdown-menu {
   width: 420px;
