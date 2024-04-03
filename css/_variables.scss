@@ -1,0 +1,23 @@
+$primary:#202188;
+$secondary:#327136;
+$gray:#9D9D9D;
+$yellow:#F0AB2B;
+$blue:#202188;
+$ubuntu: "Ubuntu",
+sans-serif;
+$black:#1C1C1C;
+$lightgray:#EFEFF0;
+// color paltte - 
+$colors:( "primary":$primary, "secondary":$secondary, "green":#327136, "black":#000000, "lightgray":#EFEFF0, "darkblue":#160B50);
+.test-btn {
+    background-color: map-get($colors, "blue");
+}
+
+@mixin fancy-border($size:1px, $color:#000) {
+    border: $size solid $color;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
