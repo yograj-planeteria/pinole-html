@@ -706,11 +706,7 @@
         .navcol {
             width: 16.3%;
             padding: 0px;
-            margin-left: 5px;
-            background: #202188e8;
-            &:hover{
-                background: #327136e8;
-            }
+           
         }
         .navBlock_col {
             display: flex;
@@ -719,6 +715,11 @@
             justify-content: center;
             padding: 20px;
             height: 210px;
+            background: #202188e8; 
+            margin-left: 5px;
+            &:hover{
+                background: #327136e8;
+            }
         }
         .navblock_icon {
             @include all;

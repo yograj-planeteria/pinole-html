@@ -680,11 +680,6 @@ label.title {
 .nav_section .navcol {
   width: 16.3%;
   padding: 0px;
-  margin-left: 5px;
-  background: rgba(32, 33, 136, 0.9098039216);
-}
-.nav_section .navcol:hover {
-  background: rgba(50, 113, 54, 0.9098039216);
 }
 .nav_section .navBlock_col {
   display: flex;
@@ -693,6 +688,11 @@ label.title {
   justify-content: center;
   padding: 20px;
   height: 210px;
+  background: rgba(32, 33, 136, 0.9098039216);
+  margin-left: 5px;
+}
+.nav_section .navBlock_col:hover {
+  background: rgba(50, 113, 54, 0.9098039216);
 }
 .nav_section .navblock_icon {
   display: flex;
