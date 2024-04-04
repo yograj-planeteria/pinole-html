@@ -212,13 +212,13 @@
     }
     
     select {
-        min-height: 50px;
+        min-height: 24px;
         background-image: url(../img/arrow-down.svg);
         background-repeat: no-repeat;
         -webkit-appearance: none;
         -moz-appearance: none;
         background-position: top 16px right 12px;
-        min-width: 130px;
+        min-width: 100px;
         background-size: 16px;
         border: 1px solid $primary;
         background-color: #fff;
@@ -300,7 +300,7 @@
             display: inline-block;
             z-index: 9;
             width: 24px;
-            height: 24px;
+            height: 34px;
             margin-right: 18px;
             select {
                 cursor: pointer;
@@ -340,7 +340,7 @@
                 margin-right: 0px;
             }
             .logo-txt{
-                font-size: 40px;
+                font-size: 34px;
                 color: #1C1C1C;
                 @include ubuntu;
                 line-height: 30px;
@@ -348,7 +348,7 @@
                 padding-bottom: 10px;
                 .logo-city{
                     color: #202188;
-                    font-size: 22px;
+                    font-size: 20px; 
                 }
             }
         }
@@ -418,7 +418,7 @@
                 padding-right: 0;
                 list-style: none;
                 a {
-                    font-size: 16px;
+                    font-size: 14px;
                     padding: 8px 17px;
                     display: flex;
                     position: relative;
@@ -432,6 +432,7 @@
                 }
                 a:hover {
                     color: #fff;
+                    text-decoration: underline;
                 }
                 li:last-child a::after {
                     display: none;
@@ -524,7 +525,7 @@
                 position: relative;
                 margin: 0px 17px;
                 >a {
-                    font-size: 21px;
+                    font-size: 18px;
                     padding: 40px 0 40px 0 !important;
                     text-align: center;
                     text-transform: uppercase;
@@ -626,7 +627,7 @@
     
     //banner
     .main_banner {
-        /* padding-top: 170px; */
+        
         position: relative;
         &:before {
             content: '';
@@ -634,28 +635,45 @@
             bottom: 0px;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, #000000D1, #54545400);
+            /* background: linear-gradient(90deg, #000000D1, #54545400); */
             z-index: 1;
         }
-        h1 {
-            color: #fff;
-            font-size: 50px;
-        }
-        h3 {
-            font-size: 24px;
-            color: #fff;
+        /* &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 122px;
+            background-image: url(../img/banner-shape.png);
+            z-index: 1;
+            background-size: cover;
+            left: 0px;
+        } */
+        h2 {
+            color: $black;
+            font-size: 38px;
         }
         .carousel-item {
-            img {}
+            img {
+                /* height: calc(100vh - 0px); */
+                width: 100%;
+                object-fit: cover;
+            }
         }
         .carousel-caption {
-            left: 20%;
-            right: 20%;
+            left: 0;
+            right: 0;
             text-align: center;
-            top: 40%;
-            max-width: 900px;
-            bottom: auto;
+            top: 0;
+            width: 487px;
+            height: 257px;
+            margin: auto;
+            bottom: 0;
             transform: translateY(-50%);
+            background-image: url(../img/banner-Subtraction-bg.png);
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
         .btn_sm {
             padding: 13px 35px;
@@ -677,46 +695,55 @@
     //banner navigation button
     .nav_section {
         position: absolute;
-        max-width: 1500px;
-        box-shadow: 0px 3px 6px #00000029;
-        background: #fff;
-        bottom: -100px;
+        /* max-width: 1500px; */
+        bottom: 0;
         z-index: 9;
         max-width: 90%;
         width: 90%;
         left: 5%;
         right: 5%;
-        padding: 20px 0px;
+        padding: 0;
         .navcol {
-            width: 16.6%;
+            width: 16.3%;
             padding: 0px 10px;
+            margin-left: 5px;
+            background: #202188e8;
+            &:hover{
+                background: #327136e8;
+            }
         }
         .navBlock_col {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 210px;
         }
         .navblock_icon {
-            background: $primary;
-            border-radius: 100px;
-            width: 115px;
-            height: 115px;
             @include all;
+            border-radius: 100px;
+            width: 87px;
+            height: 87px;
             margin-bottom: 15px;
+            border: 1px solid #fff;
+
         }
-        h4 {
+        span {
             margin: 0px;
             text-align: center;
             @include ubuntu;
+            font-size: 22px;
+            color: #ffffff;
         }
         a {
             &:hover {
-                .navblock_icon {
+               /*  .navblock_icon {
                     background: $secondary;
                 }
                 h4 {
                     color: $secondary;
-                }
+                } */
             }
         }
     }
@@ -3403,7 +3430,17 @@
     
     //Alerts
     .alert-area {
-        background: $primary;
+        background: $yellow;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        top: 168px;
+        border: 0;
+        height: 45px;
+        text-align: center;
+        padding: 10px 10px;
+        border-radius: 0px;
+        margin: 0; 
         .alert {
             background: none;
             border: 0;
@@ -3423,10 +3460,20 @@
         .close {
             position: absolute;
             right: 20px;
-            top: 10px;
+            top: 8px;
             opacity: 1;
             color: #fff;
+            width: 29px;
             visibility: visible;
+            height: 29px;
+            border: 1px solid #fff;
+            border-radius: 100%;
+            line-height: 10px;
+            & span{
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 1;
+            }
         }
     }
     
