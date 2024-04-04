@@ -53,10 +53,10 @@ h6 {
 }
 
 p {
-  line-height: 24px;
-  font-size: 15px;
+  line-height: 26px;
+  font-size: 16px;
   font-weight: normal;
-  color: #9D9D9D;
+  color: #1C1C1C;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -718,6 +718,65 @@ label.title {
    h4 {
        color: $secondary;
    } */
+}
+
+.featured-programs {
+  background: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.featured-programs .top-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  justify-content: center;
+}
+.featured-programs .top-title h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  color: #1C1C1C;
+  margin: 0;
+}
+.featured-programs .top-title h2 span {
+  font-size: 42px;
+  font-weight: 700;
+}
+.featured-programs .programs_list_info .programs_lst_row {
+  background: #fff;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsimg img {
+  width: 100%;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsbody_inner {
+  padding: 16px 0 16px 0;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsbody_inner h3 {
+  margin-bottom: 20px;
+  color: #1C1C1C;
+  font-weight: 700;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsbody_inner a.btn_learn {
+  color: #327136;
+  font-size: 21px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsbody_inner a.btn_learn:after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/arrow.svg);
+  top: 8px;
+  right: -25px;
+  width: 19px;
+  height: 18px;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsbody_inner a.btn_learn:hover {
+  color: #202188;
+}
+.featured-programs .programs_list_info .programs_lst_row .programsbody_inner a.btn_learn:hover:after {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
 }
 
 .section-padding {

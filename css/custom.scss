@@ -60,10 +60,10 @@
     }
     
     p {
-        line-height: 24px;
-        font-size: 15px;
+        line-height: 26px;
+        font-size: 16px;
         font-weight: normal;
-        color: $gray;
+        color: $black;
         font-family: "Open Sans", sans-serif;
     }
     
@@ -745,6 +745,70 @@
                 h4 {
                     color: $secondary;
                 } */
+            }
+        }
+    }
+
+    //FEATURED PROGRAMS
+    .featured-programs {
+        background: #ffffff;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        .top-title {
+            display: flex;
+            align-items: center;
+            padding-bottom: 40px;
+            justify-content: center;
+            h2{
+                @include opensans;
+                font-size: 32px;
+                color: $black;
+                margin: 0;
+                span{
+                    font-size: 42px;
+                    @include bold
+                }
+            }
+        }
+        .programs_list_info {
+            .programs_lst_row {
+                background: #fff;
+                .programsimg {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .programsbody_inner {
+                    padding: 16px 0 16px 0;
+                    h3 {
+                        margin-bottom: 20px;
+                        color: $black;
+                        @include bold 
+                    }
+                    a.btn_learn { 
+                        color: $secondary;
+                        font-size: 21px;
+                        @include opensans;
+                        @include bold;
+                        cursor: pointer;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            background-image: url(../img/arrow.svg);
+                            top: 8px;
+                            right: -25px;
+                            width: 19px;
+                            height: 18px;
+                        }
+                        &:hover{
+                            color: $primary;
+                            &:after {
+                                filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
