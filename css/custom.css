@@ -156,22 +156,45 @@ strong {
 }
 
 .btn_sm {
-  color: #341E05;
+  color: #327136;
+  font-size: 18px;
   font-weight: 700;
-  padding: 12px 22px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  cursor: pointer;
   position: relative;
-  background: #F0AB2B;
-  border-radius: 10px;
-  font-size: 15px;
-  font-family: "Ubuntu", sans-serif;
-  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+.btn_sm:after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/arrow.svg);
+  top: 5px;
+  right: -25px;
+  width: 15px;
+  height: 14px;
+  background-size: 100%;
 }
 .btn_sm:hover {
+  color: #202188;
+}
+.btn_sm:hover:after {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
+}
+
+.btn_submit {
+  background: #F0AB2B;
+  color: #1C1C1C;
+  display: inline-block;
+  padding: 8px 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50px;
+  border: 2px solid #202188;
+}
+.btn_submit:hover {
   background: #327136;
-  color: #fff;
+  color: #ffffff;
+  border: 2px solid #327136;
 }
 
 .container {
@@ -741,8 +764,13 @@ label.title {
       }
   } */
 }
+.featured-programs .fp_card_col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .featured-programs .programs_list_info .programs_lst_row {
   background: #fff;
+  cursor: pointer;
 }
 .featured-programs .programs_list_info .programs_lst_row .programsimg img {
   width: 100%;
@@ -774,10 +802,10 @@ label.title {
   width: 19px;
   height: 18px;
 }
-.featured-programs .programs_list_info .programs_lst_row .programsbody_inner a.btn_learn:hover {
+.featured-programs .programs_list_info .programs_lst_row:hover .programsbody_inner a.btn_learn {
   color: #202188;
 }
-.featured-programs .programs_list_info .programs_lst_row .programsbody_inner a.btn_learn:hover:after {
+.featured-programs .programs_list_info .programs_lst_row:hover .programsbody_inner a.btn_learn:after {
   filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
 }
 
@@ -792,7 +820,7 @@ label.title {
 .counters_number {
   position: relative;
   padding-top: 150px;
-  padding-bottom: 80px;
+  padding-bottom: 0;
   margin-top: 0;
   background-image: url(../img/counters-bg.png);
   background-repeat: no-repeat;
@@ -866,8 +894,8 @@ label.title {
 }
 
 .NewsMettings {
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 0;
   position: relative;
 }
 
@@ -879,7 +907,7 @@ label.title {
 .mt_card_col {
   padding-left: 8px;
   padding-right: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .mt-img-wrap {
@@ -887,16 +915,22 @@ label.title {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   height: 100%;
 }
+.mt-img-wrap .img_mt_block img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .mt-img-wrap h3 {
-  color: #341E05;
+  color: #1C1C1C;
 }
 .mt-img-wrap .text_mt_block {
   padding: 15px;
 }
-.mt-img-wrap .text_mt_block h6 {
+.mt-img-wrap .text_mt_block h5 {
   font-weight: 600;
   font-family: "Ubuntu", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
+  color: #1C1C1C;
+  padding-bottom: 5px;
 }
 .mt-img-wrap a {
   text-decoration: none;
@@ -917,30 +951,28 @@ label.title {
 
 .meetingBoxblock {
   background: #fff;
-  border-bottom: 1px solid #ddd;
 }
 .meetingBoxblock .meetingBox {
   display: grid;
   grid-template-columns: 90px auto;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  margin-bottom: 8px;
 }
-.meetingBoxblock .meetingBox:hover {
-  background: #202188;
-}
-.meetingBoxblock .meetingBox:hover p,
-.meetingBoxblock .meetingBox:hover h4 {
-  color: #fff;
+.meetingBoxblock .meetingBox:hover h3 {
+  color: #202188;
+  text-decoration: underline;
 }
 .meetingBoxblock .timedate {
-  background: #202188;
-  color: #fff;
-  font-size: 24px;
+  background: #F0AB2B;
+  color: #1C1C1C;
+  font-size: 27px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Ubuntu", sans-serif;
-  line-height: 26px;
+  font-weight: 700;
+  line-height: 30px;
 }
 .meetingBoxblock .timedate span {
   display: block;
@@ -951,9 +983,45 @@ label.title {
 .meetingBoxblock .meetingInfo p {
   margin-bottom: 0px;
 }
-.meetingBoxblock .meetingInfo h4 {
-  color: #202188;
+.meetingBoxblock .meetingInfo p span {
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+.meetingBoxblock .meetingInfo h3 {
+  color: #1C1C1C;
   font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 7px;
+}
+
+.signup-alerts {
+  padding-top: 100px;
+}
+.signup-alerts .form_bg {
+  padding: 40px 0px;
+  background: url(../img/signup_bg.svg);
+}
+.signup-alerts .form_bg .generic_form-news {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.signup-alerts .form_bg .generic_form-news p {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.signup-alerts .form_bg .generic_form-news h2 {
+  color: #fff;
+  font-size: 38px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+.signup-alerts .form_bg .generic_form-news .form-control {
+  border: 1px solid #E8E9EA;
+  min-height: 45px;
 }
 
 .main-text-cards .top-Title.text-center {
@@ -1460,14 +1528,16 @@ label.title {
   margin-bottom: 40px;
 }
 .topTitle h2 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 32px;
+  font-size: 42px;
   color: #1C1C1C;
   margin: 0;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
 }
 .topTitle h2 span {
-  font-size: 42px;
-  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
 }
 .topTitle p {
   font-size: 19px;
@@ -1569,11 +1639,11 @@ label.title {
 
 .img_button_row {
   justify-content: center;
+  margin-bottom: 60px;
 }
 .img_button_row .img_btn_col {
-  /* margin-bottom: 15px;
-  padding-left: 5px;
-  padding-right: 5px; */
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .img_button_row .img_block {
   position: relative;

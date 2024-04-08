@@ -166,21 +166,44 @@
     }
     
     .btn_sm {
-        color: #341E05;
+        color: $secondary;
+        font-size: 18px;
         font-weight: 700;
-        padding: 12px 22px;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
+        cursor: pointer;
         position: relative;
-        background: $yellow;
-        border-radius: 10px;
-        font-size: 15px;
-        @include ubuntu;
-        text-transform: uppercase;
+        @include opensans;
+        &:after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/arrow.svg);
+            top: 5px;
+            right: -25px;
+            width: 15px;
+            height: 14px;
+            background-size: 100%;
+        }
         &:hover {
+            color: $primary;
+            &:after {
+                filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
+            }
+        }
+    }
+    .btn_submit {
+        background: $yellow;
+        color: $black;
+        display: inline-block;
+        padding: 8px 40px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        border-radius: 50px;
+        border: 2px solid #202188;
+        
+        &:hover{
             background: $secondary;
-            color: #fff;
+            color: #ffffff;
+            border: 2px solid $secondary;
         }
     }
     
@@ -770,9 +793,14 @@
                 }
             }
         } */
+        .fp_card_col{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
         .programs_list_info {
             .programs_lst_row {
                 background: #fff;
+                cursor: pointer;
                 .programsimg {
                     img {
                         width: 100%;
@@ -802,13 +830,19 @@
                             width: 19px;
                             height: 18px;
                         }
-                        &:hover{
+                    }
+                }
+                &:hover{
+                    .programsbody_inner{
+                        a.btn_learn { 
                             color: $primary;
                             &:after {
                                 filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
                             }
                         }
                     }
+                    
+                    
                 }
             }
         }
@@ -829,7 +863,7 @@
     .counters_number{
         position: relative;
         padding-top: 150px;
-        padding-bottom: 80px;
+        padding-bottom: 0;
         margin-top: 0;
         background-image: url(../img/counters-bg.png);
         background-repeat: no-repeat;
@@ -907,8 +941,8 @@
     
     //News meeting
     .NewsMettings {
-        padding-top: 40px;
-        padding-bottom: 50px;
+        padding-top: 100px;
+        padding-bottom: 0;
         position: relative;
     }
     
@@ -920,24 +954,31 @@
     .mt_card_col {
         padding-left: 8px;
         padding-right: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
     
     .mt-img-wrap {
         background-color: #fff;
         box-shadow: 0px 3px 6px #00000029;
         height: 100%;
+        .img_mt_block{
+            img{
+                object-fit: cover;
+            }
+        }
         h3 {
-            color: #341E05;
+            color:$black;
         }
         h5 {}
         .text_mt_block {
             padding: 15px;
             h3 {}
-            h6 {
+            h5 {
                 @include semi;
                 @include ubuntu;
-                font-size: 15px;
+                font-size: 16px;
+                color:$black;
+                padding-bottom: 5px;
             }
         }
         a {
@@ -960,29 +1001,29 @@
     
     .meetingBoxblock {
         background: #fff;
-        border-bottom: 1px solid #ddd;
         .meetingBox {
             display: grid;
             grid-template-columns: 90px auto;
-            box-shadow: 0px 5px 10px #0000001A;
+            box-shadow: 0px 3px 6px #00000029;
+            margin-bottom: 8px;
             &:hover {
-                background: $primary;
-                p,
-                h4 {
-                    color: #fff;
+                h3 {
+                    color: $blue;
+                    text-decoration: underline;
                 }
             }
         }
         .timedate {
-            background: $primary;
-            color: #fff;
-            font-size: 24px;
+            background: $yellow;
+            color: $black;
+            font-size: 27px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             @include ubuntu;
-            line-height: 26px;
+            @include bold;
+            line-height: 30px;
             span {
                 display: block;
             }
@@ -991,11 +1032,49 @@
             padding: 15px;
             p {
                 margin-bottom: 0px;
+                span{
+                    font-size: 18px;
+                    @include ubuntu;
+                    @include medium;
+                }
             }
-            h4 {
-                color: $primary;
+            h3 {
+                color: $black;
                 font-weight: bold;
+                font-size: 19px;
+                margin-bottom: 7px;
             }
+        }
+    }
+
+    //signup-alerts
+    .signup-alerts {
+        padding-top: 100px;
+        .form_bg{
+            padding: 40px 0px;
+            background: url(../img/signup_bg.svg);
+            .generic_form-news {
+                max-width: 900px;
+                margin: 0 auto;
+                p {
+                    margin-bottom: 10px;
+                    color: #fff;
+                }
+                h2{
+                    color: #fff;
+                    font-size: 38px;
+                    padding-bottom: 10px;
+                    text-transform: uppercase;
+                    @include bold;
+                    text-align: center;
+                    margin: 0;
+                }
+                .form-control {
+                    border: 1px solid #E8E9EA;
+                    min-height: 45px;
+                }
+            }
+            
         }
     }
     
@@ -1524,13 +1603,16 @@
         text-align: center;
         margin-bottom: 40px;
         h2{
-            @include opensans;
-            font-size: 32px;
+            font-size: 42px;
             color: $black;
             margin: 0;
+            @include bold;
+            @include ubuntu;
             span{
-                font-size: 42px;
-                @include bold
+                @include opensans;
+                font-size: 32px;
+                @include regular;
+                
             }
         }
         p {
@@ -1653,10 +1735,10 @@
     
     .img_button_row {
         justify-content: center;
+        margin-bottom: 60px;
         .img_btn_col {
-            /* margin-bottom: 15px;
-            padding-left: 5px;
-            padding-right: 5px; */
+            padding-left: 8px;
+            padding-right: 8px;
         }
         .img_block {
             position: relative;
