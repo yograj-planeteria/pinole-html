@@ -225,9 +225,17 @@
     .contactcard_row {
         margin: 0px;
     }
-    .main_wrapper .main_breadcrumb .breadcrumb {
-        padding-left: 20px;
-        padding-right: 20px;
+    .main_breadcrumb {
+        position: absolute;
+        left: 0;
+        top: 15px;
+    }
+    .page_title {
+        padding-top: 50px;
+        h1 {
+            padding-bottom: 32px;
+            font-size: 32px;
+        }
     }
     .newsRow .newsColumn,
     .news-grid .newsColumn {

@@ -111,6 +111,18 @@
     }
     
     //general rules
+    .hyperlink{
+        color: $secondary;
+        @include bold;
+        @include opensans;
+        font-size: 16px;
+        text-decoration: none;
+        &:hover{
+            color: $primary;
+            text-decoration: underline;
+        }
+    }
+    
     .link {
         font-size: 17px;
         font-weight: 700;
@@ -206,7 +218,7 @@
     }
     
     .container {
-        max-width: 1250px;
+        max-width: 1200px;
     }
     
     img {
@@ -1210,7 +1222,7 @@
     }
     
     .accordion_block {
-        box-shadow: 0px 5px 10px #0000001A;
+        box-shadow: 0px 3px 6px #00000029; 
         margin-bottom: 15px;
     }
     
@@ -1349,11 +1361,50 @@
             }
         }
     }
+    //DEPARTMENTS & DIVISIONS
+    .department_wrap{}
+
+    //CITY GOVERNMENT-LP
+    
+    .gover_cont{
+        padding-bottom: 80px;
+        .top-intr-text{
+            max-width: 1000px;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 55px;
+            p{
+                @include opensans;
+                font-size: 16px;
+                strong{
+                    @include bold;
+                    font-style: italic;
+                }
+
+            }
+        }
+    }
+
+    .government_wrap{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -150px;
+            height: 160px;
+            background-color: $lightgray;
+            width: 100%;
+        }
+    }
+    .button_list{
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
     
     //footer
     .footer {
         background-image:url(../img/bg-footer.svg);
-        margin-top: 100px;
+        margin-top: 50px;
         position: relative;
         overflow: hidden;
         .footer-top {
@@ -1538,7 +1589,7 @@
     //Page builder starts
     .gray,
     .grey {
-        background-color: #EBE9DF;
+        background-color: $lightgray;
     }
     
     .main_wrapper>section {
@@ -1754,10 +1805,8 @@
         .text-img-wrap {
             background: #fff;
             height: 100%;
-            box-shadow: 0px 5px 10px #0000001A;
-            display: flex;
-            flex-direction: column;
-            &:hover {}
+            box-shadow: 0px 5px 10px #00000029;
+            cursor: pointer;
             &.no-img {
                 .btn_sm {
                     position: absolute;
@@ -1765,11 +1814,8 @@
                 }
             }
             &:hover {
-                h3,
                 h4,
-                h5,
-                h2,
-                h6 {
+                h5{
                     color: $primary;
                 }
                 .link {
@@ -1778,20 +1824,63 @@
                         @include img-green;
                     }
                 }
+                .text_card_block {
+                    h4{
+                        color: $primary;
+                        text-decoration: underline;
+                    }
+                }
+                .text_card_block{
+                    a.btn_learn { 
+                        color: $primary;
+                        &:after {
+                            filter: brightness(0) saturate(100%) invert(20%) sepia(35%) saturate(4674%) hue-rotate(229deg) brightness(73%) contrast(106%);
+                        }
+                    }
+                }
             }
             .img_card_block {
                 img {
                     width: 100%;
+                    object-fit: cover;
+                    height: 230px;
                 }
             }
             .text_card_block {
-                padding: 20px 25px;
+                padding:22px 20px 40px;
+                height: calc(100% - 230px);
+                position: relative;
                 p {
                     color: $black;
-                    font-weight: normal;
+                }
+                h4 {
+                    margin-bottom: 8px;
+                    color: $black;
                 }
                 h5 {
-                    margin-bottom: 15px;
+                    margin-bottom: 18px;
+                    color: $black;
+                    @include medium;
+                    font-size: 16px;
+                }
+                a.btn_learn { 
+                    color: $secondary;
+                    font-size: 18px;
+                    @include opensans;
+                    @include bold;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 20px;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background-image: url(../img/arrow.svg);
+                        top:7px;
+                        right: -24px;
+                        width: 15px;
+                        height: 14px;
+                        background-size: 100%;
+                    }
                 }
                 &:hover {}
             }
@@ -1864,10 +1953,16 @@
     }
     
     //Button List
+    .simple_list_info {
+        .row{
+            align-items: center;
+            justify-content: center;
+        }
+    }
     .simple_list_col {
-        padding-left: 6px;
-        padding-right: 6px;
-        margin-bottom: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 18px;
         a {
             color: #fff;
             display: -webkit-box;
@@ -1878,14 +1973,13 @@
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
-            min-height: 80px;
+            min-height: 60px;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            font-size: 16px;
+            font-size: 21px;
             padding: 10px;
             background: $primary;
-            border-radius: 10px;
             font-weight: 700;
             height: 100%;
             &:hover {
@@ -1960,7 +2054,7 @@
         .contact_box {
             background: #fff;
             height: 100%;
-            box-shadow: 0px 5px 10px #0000001A;
+            box-shadow: 0px 3px 6px #00000029;
             p {
                 margin-bottom: 5px;
             }
@@ -2076,7 +2170,7 @@
         position: relative;
         .expand_box {
             background: #ffff;
-            box-shadow: 0px 5px 10px #0000001A;
+            box-shadow: 0px 3px 6px #00000029;
             &:hover {
                 .plus-minus_icon {}
                 background: $secondary;
@@ -2159,7 +2253,7 @@
             overflow: hidden;
             width: 100%;
             margin-top: -15px;
-            box-shadow: 0px 5px 10px #0000001A;
+            box-shadow: 0px 3px 6px #00000029;
             background: #F8F8F8;
         }
         .expanding-container.expanded,
@@ -2835,7 +2929,7 @@
     
     .news_wraper {
         .container {
-            max-width: 1250px;
+            max-width: 1200px;
         }
         .news_section {
             margin-top: 30px;
@@ -2930,7 +3024,7 @@
             padding-top: 10px;
         }
         .news_lst_row {
-            box-shadow: 0px 5px 10px #0000001A;
+            box-shadow: 0px 3px 6px #00000029;
             margin-bottom: 15px;
             &:hover {
                 background: $primary;
@@ -2973,6 +3067,21 @@
     .news_detail {
         padding-top: 40px;
         padding-bottom: 50px;
+        &.dt_wrap{
+            .container{
+                max-width: 1200px;
+            }
+            ul{
+                @include opensans;
+                color: $black;
+                font-size: 16px;
+                li{
+                    padding-bottom: 5px;
+                    list-style-type: disc;
+                }
+            }
+        }
+        
         h1 {}
         .dt_ul {
             list-style: none;
@@ -2981,22 +3090,30 @@
             flex-wrap: wrap;
             margin-bottom: 20px;
             li {
-                font-weight: normal;
-                margin-right: 20px;
+                @include medium;
+                margin-right: 10px;
                 position: relative;
-                font-weight: 700;
-                color: $gray;
-                &:after {
+                color: $black;
+                font-size: 18px;
+                list-style-type: none!important;
+                h2{
+                    color:$secondary;
+                    @include medium;
+                    font-size: 18px;
+                }
+                &:last-child{
+                    padding-left:15px;
+                    line-height: 22px;
+                }
+              
+                &:last-child::before {
                     content: '';
                     position: absolute;
-                    background: $gray;
+                    background: $black;
                     height: 15px;
                     width: 1px;
-                    right: -10px;
+                    left:0;
                     top: 4px;
-                }
-                &:last-child::after {
-                    display: none;
                 }
                 a {
                     font-weight: 700;
@@ -3026,21 +3143,17 @@
         }
         &.dt_wrap {
             .news-dt-soc {
-                padding-top: 10px;
-                border-top: 1px solid #EBE9DF;
+                padding-top: 20px;
                 margin-bottom: 0px;
             }
         }
     }
     
     .news-dt-soc {
-        display: flex;
-        align-items: center;
-        margin-bottom: 50px;
-        h3,
         h4 {
-            margin-bottom: 0px;
-            margin-right: 10px;
+            margin-bottom: 24px;
+            color: $black;
+            @include bold;
         }
         .social_media {
             @include flex;
@@ -3054,22 +3167,29 @@
                 align-items: center;
                 li {
                     margin-right: 5px;
+                    list-style-type: none;
+                    box-shadow: 0px 5px 10px #00000029;
+                    border-radius: 100%;
+                    padding-bottom: 0;
                 }
             }
             a {
                 padding: 7px 9px;
                 display: block;
-                width: 32px;
-                height: 32px;
+                width: 45px;
+                height: 45px;
                 @include all;
                 border-radius: 100px;
-                background-color: $primary;
+                background-color: #ffffff;
                 img {
-                    max-width: 24px;
-                    max-height: 18px;
+                    max-width: 30px;
+                    max-height: 30px;
                 }
                 &:hover {
                     background: $secondary;
+                    img {
+                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(86deg) brightness(100%) contrast(105%);
+                    }
                 }
             }
         }
