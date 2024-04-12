@@ -830,6 +830,8 @@ label.title {
   padding-top: 200px;
   padding-bottom: 100px;
   background-position: -10px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .counters_number {
@@ -838,6 +840,7 @@ label.title {
   padding-bottom: 45px;
   margin-top: 0;
   background-image: url(../img/counters-bg.png);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .counters_number .shape_top {
@@ -1313,8 +1316,8 @@ label.title {
 .government_wrap::after {
   content: "";
   position: absolute;
-  bottom: -150px;
-  height: 160px;
+  bottom: -180px;
+  height: 200px;
   background-color: #EFEFF0;
   width: 100%;
 }
@@ -1329,6 +1332,8 @@ label.title {
   margin-top: 50px;
   position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .footer .footer-top {
   padding: 160px 0px 90px;
@@ -2424,7 +2429,7 @@ label.title {
   background: #202188;
   padding: 55px 15px;
 }
-.main_search_content h5 {
+.main_search_content span {
   margin-right: 20px;
   margin-bottom: 0px;
   color: #fff;
