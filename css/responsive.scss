@@ -221,6 +221,9 @@
     .signup-alerts .form_bg .generic_form-news {
         max-width: 320px;
     }
+    .news_wraper .signup-alerts .form_bg .generic_form-news {
+        max-width: 320px;
+    }
     .signup-alerts {
         padding-top: 60px;
     }
@@ -312,6 +315,11 @@
     .newsRow .newsColumn,
     .news-grid .newsColumn {
         width: 100%;
+    }
+    .news_wraper {
+        .newsSort {
+            width: 100%;
+        }
     }
     .newsSort {
         margin-left: 0px !important;

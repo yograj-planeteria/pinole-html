@@ -3192,8 +3192,8 @@
     
     //News page
     .search_box {
-        max-width: 450px;
-        margin-bottom: 15px;
+        max-width: 350px;
+        margin-bottom: 24px;
         .form-control {
             background-color: #fff;
         }
@@ -3245,7 +3245,7 @@
         }
         .nsRight {
             display: flex;
-            flex-direction: column;
+            align-items: flex-end;
             justify-content: flex-end;
         }
         .news_section {
@@ -3297,16 +3297,17 @@
         }
         .newsSort {
             padding-left: 30px;
+            width: 50%;
         }
         .newsRow {
-            margin-left: -8px;
-            margin-right: -8px;
-            margin-top: 15px;
+            margin-left: -12px;
+            margin-right: -12px;
+            margin-top:45px;
             
             .newsColumn {
                 width: 33.3%;
-                padding: 0px 7px;
-                margin-bottom: 15px;
+                padding: 0px 12px;
+                margin-bottom: 24px;
                 display: flex;
                 flex-direction: column;
                 &.newscolLg {
@@ -3322,7 +3323,8 @@
             .news_content {
                 background: #ffffff;
                 height: 100%;
-                box-shadow: 0px 5px 10px #00000029;
+                box-shadow: 0px 3px 6px #00000029;
+                cursor: pointer;
                 .newsimg{
                     img{
                         object-fit: cover;
@@ -3330,7 +3332,7 @@
                     }
                 }
                 .newsinfo {
-                    padding:35px 25px;
+                    padding:25px;
                     .newsBody{
                         span{
                             color: $black;
@@ -3341,9 +3343,17 @@
                         }
                         h3{
                             color: $black;
-                            padding-bottom: 20px;
+                            padding-bottom: 15px;
                             margin: 0;
                             @include bold;
+                            font-size: 24px;
+                        }
+                        h4{
+                            color: $black;
+                            padding-bottom: 14px;
+                            margin: 0;
+                            @include medium;
+                            font-size: 16px;
                         }
                     }
                 }
