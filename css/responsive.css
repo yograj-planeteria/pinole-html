@@ -306,6 +306,19 @@
   .news_wraper .newsRow .newsColumn {
     width: 100%;
   }
+  .event_wraper .eventRow .eventColumn {
+    width: 100%;
+  }
+  .event_wraper .search_filter_title .filterWrap {
+    grid-template-columns: auto;
+  }
+  .event-det-wraper .event-det-content .evt_slider {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .interactive_map .map_area .searchFilterBlock {
+    padding: 35px 10px;
+  }
   .main_search_content h3 {
     margin-right: 0;
     margin-bottom: 20px;
