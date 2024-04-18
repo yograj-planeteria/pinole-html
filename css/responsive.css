@@ -322,6 +322,12 @@
   .business_wraper .newsRow .newsColumn {
     width: 100%;
   }
+  .main_banner h2 {
+    font-size: 28px;
+  }
+  .main_banner .carousel-item img {
+    width: 180px;
+  }
   .main_search_content h3 {
     margin-right: 0;
     margin-bottom: 20px;

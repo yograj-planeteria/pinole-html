@@ -690,19 +690,20 @@
         h2 {
             color: $black;
             font-size: 38px;
+            @include opensans;
         }
         .carousel-item {
             img {
-                /* height: calc(100vh - 0px); */
+                /* height: calc(100vh - 0px);
                 width: 100%;
-                object-fit: cover;
+                object-fit: cover; */
             }
         }
         .carousel-caption {
             left: 0;
             right: 0;
             text-align: center;
-            top: 0;
+            top: 20%;
             width: 487px;
             height: 257px;
             margin: auto;
@@ -712,6 +713,7 @@
             align-items: center;
             justify-content: center;
             display: flex;
+            flex-flow: column;
         }
         .btn_sm {
             padding: 13px 35px;
@@ -1037,14 +1039,14 @@
             padding-top: 30px;
         }
         &:hover {
-            background: $secondary;
-            h3,
-            p,
-            h4,
-            h5,
-            h6 {
-                color: #fff;
+            .text_mt_block{
+                h3{
+                    color: $primary;
+                    text-decoration: underline;
+                }
             }
+           
+            
         }
     }
     

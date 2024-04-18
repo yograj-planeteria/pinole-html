@@ -666,18 +666,18 @@ label.title {
 .main_banner h2 {
   color: #1C1C1C;
   font-size: 38px;
+  font-family: "Open Sans", sans-serif;
 }
 .main_banner .carousel-item img {
-  /* height: calc(100vh - 0px); */
+  /* height: calc(100vh - 0px);
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover; */
 }
 .main_banner .carousel-caption {
   left: 0;
   right: 0;
   text-align: center;
-  top: 0;
+  top: 20%;
   width: 487px;
   height: 257px;
   margin: auto;
@@ -687,6 +687,7 @@ label.title {
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-flow: column;
 }
 .main_banner .btn_sm {
   padding: 13px 35px;
@@ -987,15 +988,9 @@ label.title {
 .mt-img-wrap.noimg {
   padding-top: 30px;
 }
-.mt-img-wrap:hover {
-  background: #327136;
-}
-.mt-img-wrap:hover h3,
-.mt-img-wrap:hover p,
-.mt-img-wrap:hover h4,
-.mt-img-wrap:hover h5,
-.mt-img-wrap:hover h6 {
-  color: #fff;
+.mt-img-wrap:hover .text_mt_block h3 {
+  color: #202188;
+  text-decoration: underline;
 }
 
 .meetingBoxblock {
