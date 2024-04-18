@@ -1914,7 +1914,7 @@
         .carousel-control-prev {
             width: 54px;
             height: 54px;
-            top: 50%;
+            top: 45%;
             background: #fff;
             opacity: 1;
            
@@ -2146,7 +2146,7 @@
     }
     .yellowbtn{
         width: 170px;
-        height: 45px;
+        
         text-align: center;
         font-size: 18px;
         line-height: 28px;
@@ -3362,6 +3362,7 @@
                             padding-bottom: 10px;
                             margin: 0;
                             display: block;
+                            @include medium;
                         }
                         h3{
                             color: $black;
@@ -3523,11 +3524,15 @@
         .search_filter_title {
             .filterWrap {
                 display: grid;
-                grid-template-columns: 1fr 234px 0;
+                grid-template-columns: 1fr 300px 38px;
                 align-items: end;
                 grid-column-gap: 15px;
                 .search_box {
-                    max-width: 350px;
+                    max-width: 300px;
+                    margin-bottom: 0;
+                }
+                .filter_box {
+                    max-width: 300px;
                     margin-bottom: 0;
                 }
             }
@@ -3830,7 +3835,7 @@
     //parks-facilities page start
     .interactive_map{
         .lightblue {
-            background: #F0F7FD;
+            background: #EFEFF0;
         }
         .map_area {
             .searchFilterBlock {
@@ -3897,6 +3902,7 @@
                         p {
                             padding-bottom: 10px;
                             margin: 0;
+                            @include bold;
                         }
                         ul {
                             list-style: none;
@@ -4027,11 +4033,27 @@
                 color: $black;
                 font-size: 28px;
                 margin-bottom: 20px;
+                @include bold;
             }
         }
         .park-det {
             padding: 0;
             background-color: #ffffff;
+            .acc__title {
+                h3 {
+                    margin: 0px;
+                    color: $black;
+                    font-size: 16px;
+                    @include bold;
+                    @include opensans;
+                    position: relative;
+                }
+                &:hover{
+                    h3 {
+                        color: #ffffff;
+                    }
+                }
+            }
         }
         .searchFilterBlock{
             .search_box,
@@ -4041,6 +4063,8 @@
                     color: $black;
                     padding-bottom: 7px;
                     margin: 0;
+                    @include opensans;
+                    @include bold;
                 }
             }
         }
@@ -4199,25 +4223,25 @@
 
     //business-directory start
     .business_wraper {
-        .newsRow {
+        .businessRow {
             margin-left: -12px;
             margin-right: -12px;
             margin-top: 30px;
-            .newsColumn {
+            .businessColumn {
                 width: 33.3%;
                 padding: 0px 12px;
                 margin-bottom: 24px;
                 display: flex;
                 flex-direction: column;
             }
-            .news_content {
+            .business_content {
                 background: #ffffff;
                 height: 100%;
                 box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
                 cursor: pointer;
-                .newsinfo {
+                .businessinfo {
                     padding: 25px;
-                    .newsBody {
+                    .businessBody {
                         h5 {
                             color: #1C1C1C;
                             padding-bottom: 10px;
@@ -4248,8 +4272,8 @@
                 }
                 &:hover{
                     a{
-                        .newsinfo{
-                            .newsBody{
+                        .businessinfo{
+                            .businessBody{
                                 h5{
                                     color: $primary;
                                     text-decoration: underline;
@@ -5476,4 +5500,14 @@
         width: 22px;
         height: 24px;
         background-size: 20px;
+    }
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
     }
